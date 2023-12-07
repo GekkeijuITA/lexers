@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class LineLexer implements Lexer {
 
-	private final Matcher matcher0000;
+	private final Matcher matcher;
 	private MatchResult result; // risultato dell'ultimo match che ha avuto successo; definito solo se il metodo
 								// 'reset()' non è stato chiamato
 
@@ -30,19 +30,18 @@ public class LineLexer implements Lexer {
 	}
 
 	public String next() {
-	    // completare
+		// completare
 	}
 
 	public int group() {
-	    // completare
+		// completare
 	}
 
 	public boolean hasNext() {
-	    // completare
+		// completare
 	}
 
 	public void reset(String line) {
-	    // completare
+		// completare
 	}
-
 }
