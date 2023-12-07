@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class LineLexer implements Lexer {
 
-	private final Matcher matcher;
+	private final Matcher matcher0000;
 	private MatchResult result; // risultato dell'ultimo match che ha avuto successo; definito solo se il metodo
 								// 'reset()' non è stato chiamato
 
