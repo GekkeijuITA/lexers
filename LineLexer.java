@@ -31,17 +31,30 @@ public class LineLexer implements Lexer {
 
 	public String next() {
 		// completare
+		this.result = null;
+		if(!this.matcher.lookingAt()) return null;
+		this.result = this.matcher.toMatchResult();
+		this.matcher.region(this.matcher.end(), this.matcher.regionEnd());
+		return result.group();
 	}
 
 	public int group() {
 		// completare
+		MatchResult res = this.getResult();
+		int groups = res.groupCount();
+		for(int group = 1; group <= groups; group++) {
+			if(res.group(group) != null) return group;
+		}
+		throw new AssertionError("Unexpected Error");
 	}
 
 	public boolean hasNext() {
 		// completare
+		return this.matcher.regionStart() < this.matcher.regionEnd();
 	}
 
 	public void reset(String line) {
 		// completare
+		
 	}
 }
